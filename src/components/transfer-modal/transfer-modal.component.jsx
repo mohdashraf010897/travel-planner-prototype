@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+
 import "./transfer-modal.styles.scss";
 
 class TransferModal extends React.Component {
@@ -162,26 +164,63 @@ class TransferModal extends React.Component {
                 </span>
               </div>
             </div>
+
             <div className="pickup">
               <label htmlFor="pickupLocation">Pickup Location</label>
-              <input
-                type="text"
-                id="pickupLocation"
-                name="pickup"
-                value={this.state.pickup}
-                onChange={this.handleChange}
-                required
+              <GooglePlacesAutocomplete
+                idPrefix="pickup"
+                placeholder="Enter pickup location..."
+                initialValue={this.state.pickup}
+                onSelect={({ description }) =>
+                  this.setState({ pickup: description })
+                }
+                renderSuggestions={(
+                  active,
+                  suggestions,
+                  onSelectSuggestion
+                ) => (
+                  <div className="suggestions-container">
+                    {suggestions.map((suggestion) => (
+                      <div
+                        className="suggestion"
+                        onClick={(event) =>
+                          onSelectSuggestion(suggestion, event)
+                        }
+                      >
+                        {suggestion.description}
+                      </div>
+                    ))}
+                  </div>
+                )}
               />
             </div>
             <div className="drop">
               <label htmlFor="dropLocation">Drop Location</label>
-              <input
-                type="text"
-                id="dropLocation"
-                name="drop"
-                value={this.state.drop}
-                onChange={this.handleChange}
-                required
+              <GooglePlacesAutocomplete
+                idPrefix="drop"
+                placeholder="Enter drop location..."
+                initialValue={this.state.drop}
+                onSelect={({ description }) =>
+                  this.setState({ drop: description })
+                }
+                renderSuggestions={(
+                  active,
+                  suggestions,
+                  onSelectSuggestion
+                ) => (
+                  <div className="suggestions-container">
+                    {suggestions.map((suggestion) => (
+                      <div
+                        className="suggestion"
+                        onClick={(event) =>
+                          onSelectSuggestion(suggestion, event)
+                        }
+                      >
+                        {suggestion.description}
+                      </div>
+                    ))}
+                  </div>
+                )}
               />
             </div>
 
