@@ -4,19 +4,19 @@ const INITIAL_STATE = {
   transfers: {
     1: {
       firstName: "Yogesh",
-      lastName: "Sharma",
+      lastName: "Shwarma",
       vehicleType: "Premium",
       vehicleQuantity: 5,
       adults: 4,
       children: 2,
       pickup: "Palam",
       drop: "Samosa Bhandar",
-      dateTime: "2020-05-24T02:05",
+      dateTime: "2016-05-24T11:05",
       milliSecondsToSort: 1593050820000,
     },
     2: {
       firstName: "Lalit",
-      lastName: "Kumar",
+      lastName: "Macdwala",
       vehicleType: "Van",
       vehicleQuantity: 6,
       adults: 10,

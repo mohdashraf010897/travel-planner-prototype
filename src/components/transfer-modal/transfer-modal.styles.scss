@@ -1,12 +1,12 @@
 .modal-wrapper {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  z-index: 20;
+  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -33,6 +33,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px #000;
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
   }
 
   ////////////
@@ -46,6 +58,7 @@
   form {
     width: 90%;
     margin: 0 auto;
+    overflow: hidden;
 
     input {
       display: inline-block;
@@ -73,6 +86,7 @@
       padding: 8px 10px;
       border-radius: 3px;
       transition: all 0.3s ease;
+      font-family: "Open Sans Condensed", sans-serif;
     }
 
     button {
@@ -127,7 +141,7 @@
         .container {
           display: flex;
           justify-content: space-between;
-          border: 1px solid #ddd;
+          border: 1px solid orange;
           border-radius: 10px;
           overflow: hidden;
 
@@ -135,12 +149,15 @@
             cursor: pointer;
             text-align: center;
             width: 20px;
-            background-color: #ddd;
+            background-color: orange;
+            color: white;
+            font-weight: bolder;
+            font-size: 1.1rem;
           }
 
           span {
-            border-right: 1px solid #ddd;
-            border-left: 1px solid #ddd;
+            border-right: 1px solid orange;
+            border-left: 1px solid orange;
             min-width: 40px;
           }
         }
@@ -180,7 +197,7 @@
       .quantityAdult {
         display: flex;
         justify-content: space-between;
-        border: 1px solid #ddd;
+        border: 1px solid orange;
         border-radius: 10px;
         overflow: hidden;
         margin-left: 10px;
@@ -189,12 +206,15 @@
           cursor: pointer;
           text-align: center;
           width: 20px;
-          background-color: #ddd;
+          background-color: orange;
+          color: white;
+          font-weight: bolder;
+          font-size: 1.1rem;
         }
 
         span {
-          border-right: 1px solid #ddd;
-          border-left: 1px solid #ddd;
+          border-right: 1px solid orange;
+          border-left: 1px solid orange;
           flex-shrink: 1;
           display: flex;
           justify-content: center;

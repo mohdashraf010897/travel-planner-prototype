@@ -35,7 +35,9 @@ class TransferModal extends React.Component {
   };
 
   handleDecrement = (name) => {
-    this.setState({ [name]: this.state[name] - 1 });
+    if (this.state[name] > 0) {
+      this.setState({ [name]: this.state[name] - 1 });
+    }
   };
 
   handleSubmit = (e) => {
@@ -106,22 +108,21 @@ class TransferModal extends React.Component {
                 <option></option>
                 <option value="Standard">
                   Standard
-                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                   &#xf0c0; upto 2 persons
                 </option>
                 <option value="Premium">
-                  Premium
-                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  &#xf0c0; upto 4 personss
+                  Premium &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                  &#xf0c0; upto 4 persons
                 </option>
                 <option value="Luxury Coaches">
                   Luxury Coaches
-                  &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  &#xf0c0; upto 4 persons
+                  &nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp; &#xf0c0; upto
+                  4 persons
                 </option>
                 <option value="Van">
                   Van
-                  &emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                  &nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                   &#xf0c0; upto 8 persons
                 </option>
               </select>
