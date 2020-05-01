@@ -22,7 +22,8 @@ Open terminal and run the project as :
 `npm start`
 #### Will run in development mode.
 
-Go to [https://mak-planner-prototype.netlify.app/](https://mak-planner-prototype.netlify.app/) in your browser to see it ###LIVE
+###To see it Live.
+Go to [https://mak-planner-prototype.netlify.app/](https://mak-planner-prototype.netlify.app/) in your browser 
 
 ### `NOTE: REMEMBER TO INSTALL NODE IN YOUR COMPUTER  ` 
    Go To : [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
