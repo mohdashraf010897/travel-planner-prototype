@@ -1,0 +1,89 @@
+.fa {
+  color: orange;
+}
+
+.item {
+  box-shadow: 0 1px 1rem #aaa;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px 15px;
+  transition: ease-in 0.5s;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid orangered;
+
+    h2 {
+      font-size: 1.3rem;
+      text-align: left;
+    }
+  }
+
+  &__btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+
+    span {
+      flex: 1 0 45%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      justify-items: start;
+      align-items: center;
+
+      &:nth-child(odd) {
+        margin-right: 10px;
+      }
+
+      h4,
+      p {
+        text-align: start;
+      }
+    }
+  }
+}
+
+.detail-toggler {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding-bottom: 10px;
+
+  span {
+    cursor: pointer;
+    border: solid 1px orange;
+    border-radius: 5px;
+    color: orange;
+    padding: 5px;
+    font-weight: bold;
+
+    transition: all 0.3s;
+    outline: none;
+
+    &:hover {
+      background-color: orange;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+}

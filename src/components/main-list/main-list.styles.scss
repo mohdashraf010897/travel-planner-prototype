@@ -1,0 +1,44 @@
+.main {
+  width: 75vw;
+  min-height: 80vh;
+  background-color: papayawhip;
+  box-shadow: 0 2px 5px #aaa;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 10vh;
+  padding-bottom: 10px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .create-transfer {
+      border: 2px solid orange;
+      background-color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      height: 35px;
+      width: 200px;
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: orange;
+      cursor: pointer;
+      transition: all 0.3s;
+      outline: none;
+
+      &:hover {
+        background-color: orange;
+        color: #fff;
+        transform: scale(1.05);
+      }
+
+      &:focus {
+        transform: scale(1);
+      }
+    }
+  }
+}
