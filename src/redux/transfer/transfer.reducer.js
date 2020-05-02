@@ -3,20 +3,20 @@ import _ from "lodash";
 const INITIAL_STATE = {
   transfers: {
     1: {
-      firstName: "Yogesh",
-      lastName: "Shwarma",
+      firstName: "John",
+      lastName: "Doe",
       vehicleType: "Premium",
       vehicleQuantity: 5,
       adults: 4,
       children: 2,
       pickup: "Palam",
-      drop: "Samosa Bhandar",
+      drop: "New Delhi",
       dateTime: "2016-05-24T11:05",
       milliSecondsToSort: 1593050820000,
     },
     2: {
-      firstName: "Lalit",
-      lastName: "Macdwala",
+      firstName: "Sam",
+      lastName: "Dowell",
       vehicleType: "Van",
       vehicleQuantity: 6,
       adults: 10,
